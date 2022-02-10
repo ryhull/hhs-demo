@@ -1,8 +1,8 @@
 {
-  "name": "react",
+  "name": "billowing-sun-1ifos",
   "version": "1.0.0",
   "description": "",
-  "keywords": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "react": "17.0.2",
