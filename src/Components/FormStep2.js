@@ -3,15 +3,18 @@ import Heading from "./Heading";
 import FormInput from "./FormInput";
 
 export default function FormStep2(props) {
-  // Validation before moving to the summary
+  // Perform validation before moving on to the summary view
   function submitHandler(e) {
     e.preventDefault();
-
     let errorElement = document.getElementById("errorStep2");
     if (props.formData.dateOfBirth === "")
       errorElement.innerHTML = "Please add your date of birth.";
+    else if (Date.parse(props.formData.dateOfBirth) > Date.now())
+      errorElement.innerHTML = "Sorry, no time travellers allowed.";
     else if (props.formData.healthCardNum === "")
       errorElement.innerHTML = "Please add your health card number.";
+    else if (props.formData.healthCardNum.length !== 10)
+      errorElement.innerHTML = "Health card number must be 10 numbers.";
     else if (props.formData.gender === "")
       errorElement.innerHTML = "Please select your gender.";
     else {

@@ -1,5 +1,7 @@
 import React from "react";
 
+// This component includes a label and its associated input element
+
 export default function FormInput(props) {
   return (
     <div className="form-input">

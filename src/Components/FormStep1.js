@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import FormInput from "./FormInput";
 
 export default function FormStep1(props) {
-  // On submit, app should display the next step
+  // On submit, do validation, and if inputs are valid, move to the next step
   function submitHandler(e) {
     e.preventDefault();
     let errorElement = document.getElementById("errorStep1");

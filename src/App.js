@@ -2,20 +2,19 @@ import React from "react";
 import FormStep1 from "./Components/FormStep1";
 import FormStep2 from "./Components/FormStep2";
 import Summary from "./Components/Summary";
-
 import "./styles.css";
 
 // This to hold the state of the form elements, so that their data can be passed to the last form
-
 export default function App() {
   const [formData, setFormData] = React.useState({
-    firstName: "Bob",
-    lastName: "Dole",
-    dateOfBirth: "1994-06-23",
-    healthCardNum: "1234567891",
-    gender: "Male"
+    firstName: "",
+    lastName: "",
+    dateOfBirth: "",
+    healthCardNum: "",
+    gender: ""
   });
 
+  // These states are used to control which view is currently displaying
   const [stepOneDisplay, setStepOneDisplay] = React.useState(true);
   const [stepTwoDisplay, setStepTwoDisplay] = React.useState(false);
   const [stepThreeDisplay, setStepThreeDisplay] = React.useState(false);
@@ -30,8 +29,6 @@ export default function App() {
       };
     });
   }
-
-  console.log(formData);
 
   return (
     <div className="App">

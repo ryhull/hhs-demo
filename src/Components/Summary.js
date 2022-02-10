@@ -4,7 +4,8 @@ import Heading from "./Heading";
 export default function (props) {
   function submitHandler(e) {
     e.preventDefault();
-    // Form data would be sent off to the server in this function
+    // Form data would be sent to the server in this function
+    console.log("Data sent!");
   }
 
   return (
